@@ -11,27 +11,20 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
-    @IBOutlet weak var imageViewContribution: NSImageView!
+    @IBOutlet weak var imageViewContribution: UIImageView!
     @IBOutlet weak var viewTodayContribution: UIView!
-    @IBOutlet weak var label: NSTextFieldCell!
-    @IBOutlet weak var label: NSTextField!
-    @IBOutlet weak var labelUsername: NSTextField!
-    @IBOutlet weak var labelUsername: NSTextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTodayContribution: UILabel!
     @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     let request = GithubRequest()
-    @IBOutlet weak var labn: NSTextField!
     
     fileprivate func fetchContributions() {
         guard let username = ApplicationDatas.sharedInstance.username else {
             return
         }
         
-        @IBAction func refreshContent(_ sender: AnyObject) {
-        }
         self.imageView.image = nil
         self.viewTodayContribution.backgroundColor = UIColor.clear
         self.labelTodayContribution.text = nil

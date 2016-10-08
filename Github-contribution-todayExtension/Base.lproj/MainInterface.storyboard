@@ -117,6 +117,7 @@
                     <size key="freeformSize" width="320" height="100"/>
                     <connections>
                         <outlet property="imageView" destination="Mw7-Ep-E4E" id="kqp-6N-cAL"/>
+                        <outlet property="imageViewContribution" destination="Mw7-Ep-E4E" id="5tS-m6-jwm"/>
                         <outlet property="indicatorView" destination="eRy-CI-rXc" id="XtE-R4-zCO"/>
                         <outlet property="labelError" destination="oH8-7K-Ier" id="sye-Rp-r3l"/>
                         <outlet property="labelTodayContribution" destination="PxO-Xr-yi7" id="hpX-GY-kcI"/>
