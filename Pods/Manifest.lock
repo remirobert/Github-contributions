@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.0.0)
+  - Ji (2.0.0):
+    - Ji/Ji (= 2.0.0)
+  - Ji/Ji (2.0.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (2.0.0)
+  - RxCocoa (3.0.0-beta.2):
+    - RxSwift (~> 3.0.0-beta.2)
+  - RxSwift (3.0.0-beta.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Ji (~> 2.0.0)
+  - RxCocoa (= 3.0.0-beta.2)
+  - RxSwift (= 3.0.0-beta.2)
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Ji: 79e11b5256ee809f9f7e51dc7de2059e35adf7a6
+  RxCocoa: 1dd105d8a4e18034ccd7bd6d136445363ce67c8e
+  RxSwift: 0ea939d7d97cb70657190ffde8dc2a9b455778fc
+
+PODFILE CHECKSUM: ded09d6d9daf6f943845ef0ee54cc6432aaa0a0e
+
+COCOAPODS: 1.1.0.rc.2

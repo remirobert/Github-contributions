@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Github_contribution_watch" customModuleProvider="target">
+                    <items>
+                        <imageView height="48" alignment="center" contentMode="topRight" animationDuration="1" id="POr-cz-Ay5"/>
+                        <label width="136" height="41" alignment="center" verticalAlignment="center" text="56" textAlignment="center" id="ytm-Q6-W5d">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="46"/>
+                        </label>
+                        <label height="20" alignment="center" verticalAlignment="center" text="contributions" id="rB4-99-bJa">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="v37-gS-so4">
+                        <items>
+                            <menuItem title="refresh" icon="resume" id="cFN-nJ-K6F">
+                                <connections>
+                                    <action selector="refresh" destination="AgC-eL-Hgc" id="0YM-xq-mrT"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="imageView" destination="POr-cz-Ay5" id="Tp7-GB-D2E"/>
+                        <outlet property="labelContributions" destination="rB4-99-bJa" id="RV9-R6-FKr"/>
+                        <outlet property="labelNumberContributions" destination="ytm-Q6-W5d" id="e1Y-kh-q4n"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Github_contribution_watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

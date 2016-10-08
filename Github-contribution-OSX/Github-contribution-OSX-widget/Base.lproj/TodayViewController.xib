@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="Github_contribution_OSX_widget" customModuleProvider="target">
+            <connections>
+                <outlet property="imageview" destination="hPf-Q8-Fg3" id="DPH-gT-gRa"/>
+                <outlet property="textfieldContribution" destination="ILb-UR-byz" id="E9X-8U-vpA"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="viewContributionColor" destination="IQM-rQ-WLb" id="Q8A-ID-V3d"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="93"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hPf-Q8-Fg3">
+                    <rect key="frame" x="0.0" y="45" width="358" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="rtj-7K-b7T"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="ofh-YI-SQy"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-UR-byz">
+                    <rect key="frame" x="36" y="20" width="304" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="caF-Zy-dB5"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="99W-xK-CuQ">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="IQM-rQ-WLb">
+                    <rect key="frame" x="0.0" y="14" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="9cx-uQ-Dh8"/>
+                        <constraint firstAttribute="width" constant="30" id="DKO-4i-cIN"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hPf-Q8-Fg3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="O4A-lP-hgl"/>
+                <constraint firstItem="hPf-Q8-Fg3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Q9S-gT-VVV"/>
+                <constraint firstAttribute="trailing" secondItem="ILb-UR-byz" secondAttribute="trailing" constant="20" id="Spc-DO-1AC"/>
+                <constraint firstItem="ILb-UR-byz" firstAttribute="leading" secondItem="IQM-rQ-WLb" secondAttribute="trailing" constant="8" id="Ukl-H4-hud"/>
+                <constraint firstAttribute="trailing" secondItem="hPf-Q8-Fg3" secondAttribute="trailing" id="V5k-kp-wmW"/>
+                <constraint firstItem="IQM-rQ-WLb" firstAttribute="top" secondItem="hPf-Q8-Fg3" secondAttribute="bottom" constant="1" id="qGQ-zu-2dD"/>
+                <constraint firstItem="ILb-UR-byz" firstAttribute="top" secondItem="hPf-Q8-Fg3" secondAttribute="bottom" constant="8" id="qTE-pG-Zu9"/>
+                <constraint firstItem="IQM-rQ-WLb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="rAX-ef-RZH"/>
+            </constraints>
+            <point key="canvasLocation" x="68" y="115.5"/>
+        </customView>
+    </objects>
+</document>

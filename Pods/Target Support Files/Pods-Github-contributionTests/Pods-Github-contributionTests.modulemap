@@ -1,0 +1,6 @@
+framework module Pods_Github_contributionTests {
+  umbrella header "Pods-Github-contributionTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
