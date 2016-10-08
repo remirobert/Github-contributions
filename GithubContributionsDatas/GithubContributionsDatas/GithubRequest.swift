@@ -33,8 +33,12 @@ open class GithubRequest {
     }
     
     public func contributions(username : String, _ completion: @escaping ([Contribution]?) -> Void) {
-        let url = URLRequest(url: URL(string: "https://github.com/users/\(username)/contributions")!)
-        let request = URLSession.shared.dataTask(with: url) { (data: Data?, _, error: Error?) in
+        guard let url = URL(string: "https://github.com/users/\(username)/contributions") else {
+            completion(nil)
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        let request = URLSession.shared.dataTask(with: urlRequest) { (data: Data?, _, error: Error?) in
             guard let data = data else {
                 return
             }
