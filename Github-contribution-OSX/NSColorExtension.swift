@@ -14,7 +14,7 @@ extension NSColor {
         
         cString = cString.replacingOccurrences(of: "#", with: "")
         
-        if ((cString.characters.count) != 6) {
+        if ((cString.count) != 6) {
             return NSColor.gray
         }
         

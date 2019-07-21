@@ -18,9 +18,9 @@ class GithubRequest {
             var contributions = [Contribution]()
             for result in results {
                 if result.numberOfRanges > 6 {
-                    let color = html.substring(with: result.rangeAt(2))
-                    let dataCount = Int(html.substring(with: result.rangeAt(4))) ?? 0
-                    let date = html.substring(with: result.rangeAt(6))
+                    let color = html.substring(with: result.range(at: 2))
+                    let dataCount = Int(html.substring(with: result.range(at: 4))) ?? 0
+                    let date = html.substring(with: result.range(at: 6))
                     let contribution = Contribution(color: color, dataCount: dataCount, date: date)
                     contributions.append(contribution)
                 }

@@ -32,7 +32,7 @@ class ViewController: NSViewController {
     
     @IBAction func didEnterUsername(_ sender: AnyObject) {
         self.textfieldUsername.resignFirstResponder()
-        if self.textfieldUsername.stringValue.characters.count > 0 {
+        if self.textfieldUsername.stringValue.count > 0 {
             let username = self.textfieldUsername.stringValue
             self.fetchContributions(username: username)
             ApplicationDatas.sharedInstance.username = username

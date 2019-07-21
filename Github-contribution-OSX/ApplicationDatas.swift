@@ -37,7 +37,7 @@ class ApplicationDatas {
             }
             let cgImgRef = image.cgImage(forProposedRect: nil, context: nil, hints: nil)
             let bmpImgRef = NSBitmapImageRep(cgImage: cgImgRef!)
-            let data = bmpImgRef.representation(using: NSBitmapImageFileType.PNG, properties: [:])
+            let data = bmpImgRef.representation(using: NSBitmapImageRep.FileType.png, properties: [:])
 
             self.userDefaults.set(data, forKey: "image")
             self.userDefaults.synchronize()
